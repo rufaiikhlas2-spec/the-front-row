@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Front Row — A Memoir by Ikhlas Rufai (KLASH)</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Lora:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="dark-theme">
+
+  <!-- TOP APP BAR -->
+  <header class="app-bar">
+    <button id="btn-toc" class="icon-btn" aria-label="Table of Contents">
+      <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path d="M4 6h16M4 12h16M4 18h7"></path>
+      </svg>
+    </button>
+    
+    <div class="book-title-header">
+      <span class="book-main-title">THE FRONT ROW</span>
+      <span id="header-chapter-title" class="chapter-sub-title">Title Page</span>
+    </div>
+
+    <button id="btn-settings" class="icon-btn" aria-label="Reading Settings">
+      <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path d="M12 15a3 3 0 100-6 3 3 0 000 6z"></path>
+        <path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"></path>
+      </svg>
+    </button>
+  </header>
+
+  <!-- TABLE OF CONTENTS DRAWER -->
+  <aside id="toc-drawer" class="drawer">
+    <div class="drawer-header">
+      <h2>Table of Contents</h2>
+      <button id="btn-close-toc" class="icon-btn">&times;</button>
+    </div>
+    <nav class="toc-list" id="toc-list"></nav>
+  </aside>
+
+  <!-- SETTINGS MODAL -->
+  <aside id="settings-drawer" class="drawer">
+    <div class="drawer-header">
+      <h2>Reading Settings</h2>
+      <button id="btn-close-settings" class="icon-btn">&times;</button>
+    </div>
+    <div class="settings-content">
+      <div class="setting-group">
+        <label>Theme</label>
+        <div class="theme-options">
+          <button class="theme-btn active" data-theme="dark">Dark</button>
+          <button class="theme-btn" data-theme="sepia">Sepia</button>
+          <button class="theme-btn" data-theme="light">Light</button>
+        </div>
+      </div>
+      <div class="setting-group">
+        <label>Text Size</label>
+        <div class="font-size-controls">
+          <button id="btn-font-decrease">A-</button>
+          <span id="font-size-label">100%</span>
+          <button id="btn-font-increase">A+</button>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <div id="backdrop" class="backdrop"></div>
+
+  <!-- MAIN BOOK CONTENT DISPLAY -->
+  <main class="reader-container">
+    <article id="page-content" class="book-page"></article>
+  </main>
+
+  <!-- BOTTOM NAVIGATION BAR -->
+  <footer class="bottom-nav">
+    <button id="btn-prev" class="nav-btn">
+      <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 19l-7-7 7-7"></path></svg>
+      <span>Previous</span>
+    </button>
+    <div class="page-indicator">
+      <span id="current-page-num">1</span> / <span id="total-pages-num">--</span>
+    </div>
+    <button id="btn-next" class="nav-btn">
+      <span>Next</span>
+      <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"></path></svg>
+    </button>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
